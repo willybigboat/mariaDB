@@ -13,9 +13,15 @@ export class ReservationsRoute extends Route{
     }
 
     protected setRoutes(): void {
-        this.router.get(`${this.url}test`,(req, res)=>{
+        // 測試路由
+        this.router.get(`${this.url}test`, (req, res) => {
             this.Contorller.test(req, res);
-        })
+        });
+        
+        // 添加列表路由
+        this.router.get(`${this.url}list`, (req, res) => {
+            this.Contorller.list(req, res);
+        });
     }
 
 }
